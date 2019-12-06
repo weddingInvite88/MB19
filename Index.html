@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./A/DUI.css">
+    <link rel="stylesheet" type="text/css" href="./A/PBUI.css">
+    <title>Do</title>
+</head>
+<style>
+    /* .MAIN{ */
+        /* background-color: red; */
+    /* } */
+
+</style>
+<body>
+    <div class="MAIN blue col-SP-10 col-NP-10 col-BP-10 col-DL-10 col-LD-10" id="main">
+        <div class="PHCONT ELCEN" id="phcont">
+            <img src="" alt="" id="phos">
+        </div>
+        <div class="MESS ELCEN" id="mess">
+            <h3>Happiest Birthday Sweet Baby.</h3>
+            <h5>Be Happy, its your day, <br> I understand the hard time we have right now that is, we are far from each other.
+                    But, If anything gets so easily, then it’s not the best thing / part.
+                    We will wait for each other, I am sure in very few days everything will be alright.
+                    Keep smiling Sweetheart.
+            </h5>
+        </div>
+    </div>
+</body>
+<script>
+    var PH = ['./A/P/1.jpg','./A/P/2.jpg','./A/P/3.jpg','./A/P/4.jpg','./A/P/5.jpg','./A/P/6.jpg','./A/P/7.jpg'];
+
+    var ELE = document.getElementById('phcont');
+
+    // PH.forEach(function(p,pp,ppp){
+    //     if (pp < PH.length - 1) {
+            
+    //     }
+    //     ELE.innerHTML += '<img src="'+p+'" alt="">';
+    // });
+
+    a = 0;
+    function ChanImg(){
+        ELE.innerHTML   = '<img src="'+PH[a]+'" alt="">';
+
+        if (a < PH.length - 1) {
+            a++;
+        }else{
+            a = 0;
+        }
+        setTimeout('ChanImg()',3000)
+    }
+    ChanImg()
+</script>
+</html>
